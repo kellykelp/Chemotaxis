@@ -9,5 +9,12 @@
  }  
  class Bacteria    
  {     
+ 	int myX, myY, bColor; 
+ 	Bacteria() 
+ 	{
+ 		myX = x;
+ 		myY = y;
+ 		bColor = Math.random()*255 + 1; 
+ 	}
  	//lots of java!   
  }    
