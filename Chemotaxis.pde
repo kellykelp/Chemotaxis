@@ -4,7 +4,7 @@
  void setup()   
  {     
  	size(500, 500);
- 	walker = new Bacteria[20];
+ 	walker = new Bacteria[300];
  	for (int i = 0; i < walker.length; i++)
  	{
  		walker[i] = new Bacteria();
@@ -33,8 +33,26 @@
 
  	void walk() 
  	{
+ 		// if (mouseX > myX)
+ 		// {
+ 		// 	myX = myX + (int)(Math.random()*5) +1;
+ 		// }
+ 		// else
+ 		// {
+ 		// 	myX= myX + (int)(Math.random()*3) -3;
+ 		// }
+ 		// if (mouseY > myY)
+ 		// 	myX = myX + (int)(Math.random()*3) +1;
+ 		// else
+ 		// 	myY = myY + (int)(Math.random()*3) -3;
+ 		if (get(mouseX, mouseY) != color(179))
+ 		{
+ 			myX = myX + (int)(Math.random()*3) -3;
+ 			myY = myY + (int)(Math.random()*3) -3; 
+ 		}
+
  		myX = myX + (int)(Math.random()*3) -1;
- 		myY = myY + (int)(Math.random()*3) -1;
+ 		myY = myY + (int)(Math.random()*3) -1; 
  	}
  	void show()
  	{
