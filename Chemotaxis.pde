@@ -14,7 +14,9 @@
 
  void draw()   
  {  
- 	background(179);  
+ 	background(#0a0421);
+ 	fill(#e07d26, 230);
+ 	ellipse(250, 250, 400, 400);  
  	for (int i = 0; i < walker.length; i++)
  	{
  		walker[i].show();
@@ -22,6 +24,7 @@
  	}
  	//move and show the bacteria   
  }  
+
  class Bacteria    
  {     
  	int myX, myY, bColor; 
@@ -33,30 +36,27 @@
 
  	void walk() 
  	{
- 		// if (mouseX > myX)
- 		// {
- 		// 	myX = myX + (int)(Math.random()*5) +1;
- 		// }
- 		// else
- 		// {
- 		// 	myX= myX + (int)(Math.random()*3) -3;
- 		// }
- 		// if (mouseY > myY)
- 		// 	myX = myX + (int)(Math.random()*3) +1;
- 		// else
- 		// 	myY = myY + (int)(Math.random()*3) -3;
- 		if (get(mouseX, mouseY) != color(179))
+ 		if (get(mouseX, mouseY) != color(#0a0421))
  		{
- 			myX = myX + (int)(Math.random()*3) -3;
- 			myY = myY + (int)(Math.random()*3) -3; 
- 		}
+ 			myX = (int)(Math.random()*500);
+ 			fill((int)(Math.random()*256));
+ 			textSize(50);
+ 			text("STORMMM!!!!", 100, 400);
+ 			text("Saturn's rings are spinning too quickly!!!!", 50, 450);
+ 		}	
+ 		// if (get(mouseX, mouseY) != color(179))
+ 		// {
+ 		// 	myX = myX + (int)(Math.random()*4) -2;
+ 		// 	myY = myY + (int)(Math.random()*4) -2; 
+ 		// }
 
- 		myX = myX + (int)(Math.random()*3) -1;
+ 		myX = myX + (int)(Math.random()*5) -2;
  		myY = myY + (int)(Math.random()*3) -1; 
  	}
  	void show()
  	{
- 		fill(bColor);
+ 		noStroke();
+ 		fill(0, bColor, 0);
  		ellipse(myX, myY, 10, 10);
  	}
  	//lots of java!   
