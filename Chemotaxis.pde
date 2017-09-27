@@ -15,7 +15,7 @@
  void draw()   
  {  
  	background(#0a0421);
- 	fill(#e07d26, 230);
+ 	fill(#ca9eff, 230);
  	ellipse(250, 250, 400, 400);  
  	for (int i = 0; i < walker.length; i++)
  	{
@@ -42,7 +42,12 @@
  			fill((int)(Math.random()*256));
  			textSize(50);
  			text("STORMMM!!!!", 100, 400);
- 			text("Saturn's rings are spinning too quickly!!!!", 50, 450);
+ 			textSize(20);
+ 			text("Planet X's rings are spinning too quickly!!!!", 50, 470);
+ 			fill(#2b1047);
+ 			ellipse(170, 170, 30, 30);
+ 			ellipse(370, 170, 30, 30);
+ 			arc(300, 200, 100, 50, PI/1500, PI);
  		}	
  		// if (get(mouseX, mouseY) != color(179))
  		// {
@@ -56,7 +61,7 @@
  	void show()
  	{
  		noStroke();
- 		fill(0, bColor, 0);
+ 		fill((int)(Math.random()*255) + 1, bColor, (int) (Math.random()*255) + 1, 150);
  		ellipse(myX, myY, 10, 10);
  	}
  	//lots of java!   
