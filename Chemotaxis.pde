@@ -38,22 +38,9 @@
  	{
  		if (get(mouseX, mouseY) != color(#0a0421))
  		{
+ 			why();
  			myX = (int)(Math.random()*500);
- 			fill((int)(Math.random()*256));
- 			textSize(50);
- 			text("STORMMM!!!!", 100, 400);
- 			textSize(20);
- 			text("Planet X's rings are spinning too quickly!!!!", 50, 470);
- 			fill(#2b1047);
- 			ellipse(170, 170, 30, 30);
- 			ellipse(370, 170, 30, 30);
- 			arc(300, 200, 100, 50, PI/1500, PI);
  		}	
- 		// if (get(mouseX, mouseY) != color(179))
- 		// {
- 		// 	myX = myX + (int)(Math.random()*4) -2;
- 		// 	myY = myY + (int)(Math.random()*4) -2; 
- 		// }
 
  		myX = myX + (int)(Math.random()*5) -2;
  		myY = myY + (int)(Math.random()*3) -1; 
@@ -66,3 +53,22 @@
  	}
  	//lots of java!   
  }    
+
+ void why()
+ {
+	fill((int)(Math.random()*256));
+	textSize(50);
+	text("STORMMM!!!!", 100, 400);
+	textSize(20);
+	text("Planet X's rings are spinning too quickly!!!!", 50, 470);
+	fill(#2b1047);
+	ellipse(170, 170, 30, 30);
+	ellipse(370, 170, 30, 30);
+	arc(300, 200, 50, 45, TWO_PI-PI, TWO_PI);
+	fill(255);
+	rect(20, 10, 350, 100, 5);
+	triangle(20, 110, 50, 110, 50, 150);
+	fill(0);
+	textSize(35);
+	text("Stop it!!!!!!!! pls \nThis hurts my soul", 30, 50); 	
+ }
